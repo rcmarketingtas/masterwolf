@@ -9,6 +9,13 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f0f0f]">
       {/* Background layers */}
       <div className="absolute inset-0">
+        {/* Hero background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        />
+        {/* Dark overlay to keep text readable */}
+        <div className="absolute inset-0 bg-[#0f0f0f]/75" />
         {/* Radial glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(192,192,192,0.06),transparent)]" />
         {/* Grid overlay */}

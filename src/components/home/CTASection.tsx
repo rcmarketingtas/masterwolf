@@ -9,6 +9,11 @@ export default function CTASection() {
     <section className="relative py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#0f0f0f]">
+        {/* CTA background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ backgroundImage: "url('/images/cta-bg.jpg')" }}
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,rgba(192,192,192,0.06),transparent)]" />
         <div
           className="absolute inset-0 opacity-[0.025]"

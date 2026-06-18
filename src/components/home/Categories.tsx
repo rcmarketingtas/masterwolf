@@ -13,6 +13,7 @@ const categoryCards = [
     gradient: "from-[#1a1a2e] via-[#2a2a3e] to-[#1f1f2f]",
     accentColor: "from-orange-900/20 to-orange-800/5",
     icon: "○",
+    image: "/images/category-foam-pads.jpg",
   },
   {
     slug: "polishers",
@@ -21,6 +22,7 @@ const categoryCards = [
     gradient: "from-[#1a1a1a] via-[#2a2a2a] to-[#1f1f1f]",
     accentColor: "from-zinc-700/30 to-zinc-800/5",
     icon: "◎",
+    image: "/images/category-polishers.jpg",
   },
   {
     slug: "microfibre",
@@ -29,6 +31,7 @@ const categoryCards = [
     gradient: "from-[#0f1f1f] via-[#1a2f2f] to-[#0f1a1a]",
     accentColor: "from-teal-900/20 to-teal-800/5",
     icon: "≋",
+    image: "/images/category-microfibre.jpg",
   },
   {
     slug: "clay-mitts",
@@ -37,6 +40,7 @@ const categoryCards = [
     gradient: "from-[#1f1a0f] via-[#2f2a1a] to-[#1a150a]",
     accentColor: "from-amber-900/20 to-amber-800/5",
     icon: "⬡",
+    image: "/images/category-clay-mitts.jpg",
   },
   {
     slug: "chemicals",
@@ -45,6 +49,7 @@ const categoryCards = [
     gradient: "from-[#1a0f1f] via-[#2a1f2f] to-[#150a1a]",
     accentColor: "from-violet-900/20 to-violet-800/5",
     icon: "⬢",
+    image: "/images/category-chemicals.jpg",
   },
 ];
 
@@ -79,6 +84,11 @@ export default function Categories() {
                   transition={{ duration: 0.2 }}
                   className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${cat.gradient} border border-[#2a2a2a] hover:border-[#c0c0c0]/40 transition-all duration-300 group cursor-pointer h-56 sm:h-64`}
                 >
+                  {/* Category background image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                    style={{ backgroundImage: `url('${cat.image}')` }}
+                  />
                   {/* Accent glow */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-b ${cat.accentColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}

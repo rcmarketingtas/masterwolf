@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Shield, Target, Users, Award, TrendingUp, MapPin } from "lucide-react";
 import AnimatedSection, { staggerContainer, staggerItem } from "@/components/ui/AnimatedSection";
@@ -97,24 +98,20 @@ export default function AboutPage() {
               </div>
             </AnimatedSection>
 
-            {/* Decorative element */}
+            {/* Story image */}
             <AnimatedSection delay={0.2} direction="left">
               <div className="relative">
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-[#1f1f1f] to-[#0f0f0f] border border-[#2a2a2a] flex items-center justify-center">
-                  <div className="text-center p-10">
-                    <div
-                      className="text-7xl font-black text-[#2a2a2a] leading-none heading-font mb-4"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      MW
-                    </div>
-                    <div
-                      className="text-2xl font-black tracking-widest text-[#3a3a3a] heading-font"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      MASTERWOLF
-                    </div>
-                    <div className="text-xs tracking-[0.3em] text-[#2a2a2a] uppercase mt-1">
+                <div className="aspect-square rounded-lg overflow-hidden border border-[#2a2a2a]">
+                  <Image
+                    src="/images/about-story.jpg"
+                    alt="Professional detailer at work"
+                    width={600}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent" />
+                  <div className="absolute bottom-5 left-5">
+                    <div className="text-xs tracking-[0.3em] text-[#c0c0c0]/70 uppercase">
                       Est. 2012 · Melbourne, AU
                     </div>
                   </div>
